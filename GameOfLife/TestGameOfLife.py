@@ -25,6 +25,12 @@ class Test_CellShouldDieLessTwoNeighbors(unittest.TestCase):
         cell.next_generation_state(neighbors)
         self.assertEqual(cell.state, cell_state.DEAD)
 
+    def test_cell_should_die_with_one_neighbor(self):
+        neighbors = 1
+        cell.state = cell_state.ALIVE
+        cell.next_generation_state(neighbors)
+        self.assertEqual(cell.state, cell_state.DEAD)
+
 
 
 
