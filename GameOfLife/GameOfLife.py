@@ -3,5 +3,8 @@ class CellState():
     DEAD = 0
 
 class Cell():
-    pass
+    state = None
+
+    def __init___(self, state):
+        self.state = state
 
