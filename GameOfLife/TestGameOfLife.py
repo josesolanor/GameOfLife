@@ -46,12 +46,13 @@ class Test_CellShouldAliveTwoOrThreeNeighbors(unittest.TestCase):
         self.assertEqual(cell.state, cell_state.ALIVE)
 
 
-# Cualquier célula viva con más de tres vecinos vivos muere.
+# Cualquier célula viva con más de tres vecinos vivos muere (cantidad maxima 8 vecinos en una grilla).
 class Test_CellShouldDieWithMoreThanThreeNeighbors(unittest.TestCase):
-    def test_cell_should_die_with_four_Neighbors(self):
-        neighbors = 4
+    def test_cell_should_die_with_more_than_three_neighbors(self):
+        neighbors = [4,5,6,7,8]
         cell.state = cell_state.ALIVE
-        cell.next_generation_state(neighbors)
-        self.assertEqual(cell.state, cell_state.DEAD)
+        for neighbor in neighbors:
+            cell.next_generation_state(neighbor)
+            self.assertEqual(cell.state, cell_state.DEAD)
 
 # Cualquier célula muerta con exactamente tres vecinos vivos se convierte en una célula viva.
