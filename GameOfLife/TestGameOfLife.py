@@ -5,11 +5,11 @@ cell_state = CellState()
 cell = Cell()
 
 class Test_CellState(unittest.TestCase):
-    def test_should_initialize_cell_alive(self):
+    def test_cell_should_initialize_alive(self):
         cell.state = cell_state.ALIVE
         self.assertEqual(cell.state, cell_state.ALIVE)
 
-    def test_should_initialize_cell_dead(self):
+    def test_cell_should_initialize_dead(self):
         cell.state = cell_state.DEAD
         self.assertEqual(cell.state, cell_state.DEAD)
 
