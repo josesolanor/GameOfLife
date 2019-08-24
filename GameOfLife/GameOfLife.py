@@ -9,8 +9,10 @@ class Cell():
         self.state = state
 
     def next_generation_state(self, neighbors):
-        if neighbors == 2 or neighbors == 3 :
-            self.state = CellState.ALIVE
-        else:
-            self.state = CellState.DEAD
+
+        if self.state == CellState.ALIVE:
+            if neighbors == 2 or neighbors == 3:
+                self.state = CellState.ALIVE
+            else:
+                self.state = CellState.DEAD
 
