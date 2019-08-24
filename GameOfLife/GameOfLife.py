@@ -16,3 +16,8 @@ class Cell():
             else:
                 self.state = CellState.DEAD
 
+        elif self.state == CellState.DEAD:
+            if neighbors == 3:
+                self.state = CellState.ALIVE
+
+
