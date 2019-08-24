@@ -62,3 +62,6 @@ class Test_CellShouldAliveWithExactlyThreeNeighbors(unittest.TestCase):
         cell.state = cell_state.DEAD
         cell.next_generation_state(neighbors)
         self.assertEqual(cell.state, cell_state.ALIVE)
+
+if __name__ == '__main__':
+    unittest.main()
