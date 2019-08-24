@@ -1,6 +1,6 @@
 # TDD Juego de la Vida de Jhon Conway en Python
 
-_Autor: Jose Solano Romero_
+_Autor: Jose G Solano Romero_
 
 _El proyecto es el desarrollo de la logica del Juego de la vida del matematico Jhon Conway aplicando TDD en Python_
 
