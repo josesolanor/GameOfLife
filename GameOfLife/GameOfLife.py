@@ -8,3 +8,6 @@ class Cell():
     def __init___(self, state):
         self.state = state
 
+    def next_generation_state(self, neighbors):
+        self.state = CellState.DEAD
+
